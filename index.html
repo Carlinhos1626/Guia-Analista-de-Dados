@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/public/style.css" />
+</head>
+
+<body>
+
+
+
+
+    <main>
+        <!-- Header Start -->
+        <header>
+            <nav class="nav container">
+                <h2 class="nav_logo"><a href="#"><img src="/public/images/logo branca.png" id="logo" /></a>
+                </h2>
+            </nav>
+        </header>
+        <!-- Header End -->
+
+        <!-- Hero Start -->
+        <section class="hero">
+            <div class="row container">
+                <div class="column">
+                    <h2>Ebook: Guia Completo <br />do Analista de Dados</h2>
+                    <p>Descubra o que é ser um analista de dados, quais são suas funções
+                        <br> e como dar os primeiros passos nessa carreira em alta.
+                    </p>
+                    <div class="form_column">
+                        <div class="wrapper">
+                            <div class="title"><span>Preencha as informações abaixo</span></div>
+                            <form id="emailForm">
+                                <div class="row2">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" placeholder="Nome" required />
+                                </div>
+                                <div class="row2">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" id="email" placeholder="E-mail" required />
+                                </div>
+                                <div class="row2 button">
+                                    <input type="submit" value="RECEBER EBOOK AGORA!!!" />
+                                </div>
+                            </form>
+                            <!-- Modal de Alerta -->
+                            <div class="alert hide" id="alertBox">
+                                <span class="fas fa-exclamation-circle"></span>
+                                <span class="msg" id="alertMessage">Mensagem padrão de alerta</span>
+                                <div class="close-btn" onclick="hideAlert()">
+                                    <span class="fas fa-times"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <img src="/public/images/ebook.png" alt="heroImg" class="hero_img" />
+                </div>
+            </div>
+            <img src="/public/images/bg-bottom-hero.png" alt="" class="curveImg" />
+        </section>
+        <!-- Hero End -->
+    </main>
+
+    <script src="/api/script.js"></script>
+    <!-- Inclua o SDK do EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("40NHrlso69mD6KmHN"); // Substitua "YOUR_PUBLIC_KEY" pela sua chave pública real
+        })();
+    </script>
+
+</body>
+
+</html>
